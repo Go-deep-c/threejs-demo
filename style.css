@@ -3,13 +3,41 @@ html, body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #0b1020;
+  background: radial-gradient(circle at 50% 35%, #17305f 0%, #0b1020 48%, #050713 100%);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 #app {
   width: 100vw;
   height: 100vh;
+}
+
+#app::before {
+  content: '';
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 220px;
+  height: 220px;
+  margin-left: -110px;
+  margin-top: -110px;
+  border-radius: 42% 58% 63% 37% / 42% 39% 61% 58%;
+  background: linear-gradient(135deg, #62d2ff, #8f7cff, #ffffff);
+  box-shadow: 0 0 60px rgba(98, 210, 255, 0.55), inset -24px -20px 48px rgba(0, 0, 0, 0.24);
+  animation: spinBlob 5s linear infinite;
+}
+
+#app::after {
+  content: '';
+  position: fixed;
+  left: 50%;
+  top: calc(50% + 150px);
+  width: 360px;
+  height: 54px;
+  margin-left: -180px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.34);
+  filter: blur(8px);
 }
 
 #info {
@@ -35,4 +63,10 @@ html, body {
 #info span {
   font-size: 13px;
   opacity: 0.82;
+}
+
+@keyframes spinBlob {
+  from { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.08); }
+  to { transform: rotate(360deg) scale(1); }
 }
