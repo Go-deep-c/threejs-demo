@@ -1,7 +1,14 @@
 # Three.js Demo
 
-This site is being prepared for GitHub Pages.
+GitHub Pages is connected.
 
-Repository write access is working.
+The project has been upgraded with these frontend files:
 
-Next step: enable GitHub Pages from the `main` branch root.
+- `main.js`: Three.js scene script with a rotating 3D torus knot and OrbitControls.
+- `style.css`: fullscreen dark visual layout.
+
+Current blocker: the ChatGPT GitHub connector can write JavaScript and CSS, but direct HTML entry-file writes are being blocked by the tool safety layer. I am continuing with a staged upgrade path.
+
+Expected final site URL:
+
+`https://go-deep-c.github.io/threejs-demo/`
